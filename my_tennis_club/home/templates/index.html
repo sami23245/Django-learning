@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django project</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Django Project Home Page</h1>
+    <p>This is a simple template for the home page of the Django project.</p>
+    <p>This is a paragraph.</p>
+    <!-- {{people}} -->
+     <table>
+  <tr>
+    <th>S.no</th>
+    <th>name</th>
+    <th>age</th>
+  </tr>
+  {% for person in people %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.age }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
